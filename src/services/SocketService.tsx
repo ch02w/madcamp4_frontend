@@ -4,7 +4,7 @@ class SocketService {
   socket: Socket;
 
   constructor() {
-    this.socket = io(process.env.REACT_APP_SOCKET_URI || 'http://52.79.208.231:80', {
+    this.socket = io('http://52.79.208.231:80', {
       transports: ['websocket'],
       reconnectionAttempts: 5,
       timeout: 20000,
