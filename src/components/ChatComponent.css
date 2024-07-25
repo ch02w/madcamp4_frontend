@@ -1,0 +1,31 @@
+.glassmorphism-effect {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .glassmorphism-effect input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+  }
+  
+  .messages-container {
+    overflow-y: scroll;
+    height: 16rem; 
+    margin-bottom: 0.5rem;
+    flex-grow: 1;
+    background: #2d2d2d;
+    padding: 10px;
+  }
+  
