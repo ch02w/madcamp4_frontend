@@ -1,71 +1,72 @@
 .page-container {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .canvas-wrapper {
-    margin-right: 2rem;
-  }
-  
-  .threeview-wrapper {
-    position: relative;
-    width: 600px;
-    height: 800px;
-    z-index: 10;
-  }
-  
-  .color-picker-wrapper {
-    position: fixed;
-    bottom: 1.25rem;
-    left: 1.25rem;
-    z-index: 20;
-    display: flex;
-    align-items: center;
-  }
-  
-  .color-picker-button {
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 56px;
-    height: 56px;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-    overflow: hidden;
-    background: linear-gradient(0deg, rgba(0, 198, 20, 1), rgba(0, 198, 20, 0)),
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.canvas-wrapper {
+  margin-right: 2rem;
+}
+
+.threeview-wrapper {
+  position: relative;
+  width: 600px;
+  height: 800px;
+  z-index: 10;
+}
+
+.color-picker-wrapper {
+  position: fixed;
+  bottom: 3rem;
+  left: 3rem;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+}
+
+.color-picker-button {
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(0deg, rgb(0, 142, 14), rgba(0, 198, 20, 0)),
               linear-gradient(90deg, rgba(255, 0, 0, 1), rgba(0, 10, 255, 1));
-  }
-  
-  .color-picker {
-    position: absolute;
-    bottom: 5rem;
-    left: 1.25rem;
-  }
-  
-  .download-button {
-    background-color: #28a745;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    margin-left: 0.5rem;
-    cursor: pointer;
-  }
-  
-  .NFTMintingModal {
-    z-index: 30;
-    position: relative;
-  }
-  
+  margin-right: 1rem; /* 버튼 사이의 간격 조정 */
+}
+
+.download-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.download-button {
+  background-color: #28a745;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.color-picker {
+  position: absolute;
+  bottom: 5rem;
+  left: 1.25rem;
+}
+
+.NFTMintingModal {
+  z-index: 30;
+  position: relative;
+}

@@ -10,6 +10,8 @@ import html2canvas from 'html2canvas';
 import NFTMintingModal from '../components/NFTMintingModal';
 import './Page2.css';
 import { useNavigate } from 'react-router-dom';
+import { FaCoins, FaPalette } from 'react-icons/fa';
+import { HiCube } from "react-icons/hi2";
 
 interface CanvasState {
   [key: string]: { value: number; timestamp: number };
@@ -160,14 +162,32 @@ const Page2: React.FC = () => {
             </div>
           )}
           {showDownloadButton && (
-            <>
-              <button onClick={generateGLB} className="download-button">
-                Download GLB
+            <div className="download-buttons">
+              <button onClick={generateGLB}
+                style={{
+                  padding: '20px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: 'transparent',
+                  color: 'white'
+                }}>
+                <HiCube size={36} />
               </button>
-              <button onClick={exportToPNG} className="download-button">
-                Export to PNG
+              <button
+                onClick={exportToPNG}
+                style={{
+                  padding: '20px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: 'transparent',
+                  color: 'white'
+                }}
+              >
+                <FaCoins size={36} />
               </button>
-            </>
+            </div>
           )}
         </div>
         <NFTMintingModal isOpen={isMinting} onClose={handleCloseModal} url={mintingURL} />

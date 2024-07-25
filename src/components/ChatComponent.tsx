@@ -93,10 +93,11 @@ const ChatComponent: React.FC = () => {
     <div>
       <button
         onClick={toggleChat}
-        className="fixed bottom-8 right-8 bg-transparent text-white rounded-full shadow-lg"
-        style={{ zIndex: 10000, width: '56px', height: '56px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        className="chat-button fixed bottom-8 right-8 bg-transparent text-white rounded-full shadow-lg"
+        style={{ zIndex: 10000 }}
       >
         <FaCommentDots className="h-6 w-6" />
+        <span className="ml-2">채팅</span>
       </button>
       <div
         className={`fixed bottom-4 right-4 w-80 h-112 glassmorphism-effect transition-transform duration-300 ${
