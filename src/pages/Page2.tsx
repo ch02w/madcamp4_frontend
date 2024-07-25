@@ -165,24 +165,26 @@ const Page2: React.FC = () => {
             <div className="download-buttons">
               <button onClick={generateGLB}
                 style={{
-                  padding: '20px',
+                  padding: '10px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   backgroundColor: 'transparent',
-                  color: 'white'
+                  color: 'white',
+                  marginLeft: '10px'
                 }}>
                 <HiCube size={36} />
               </button>
               <button
                 onClick={exportToPNG}
                 style={{
-                  padding: '20px',
+                  padding: '10px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   backgroundColor: 'transparent',
-                  color: 'white'
+                  color: 'white',
+                  marginLeft: '10px'
                 }}
               >
                 <FaCoins size={36} />
