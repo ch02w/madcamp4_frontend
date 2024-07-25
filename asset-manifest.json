@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/madcamp4_frontend/static/css/main.71cd7eb7.css",
+    "main.js": "/madcamp4_frontend/static/js/main.74a62c5e.js",
+    "static/js/453.71217b9a.chunk.js": "/madcamp4_frontend/static/js/453.71217b9a.chunk.js",
+    "index.html": "/madcamp4_frontend/index.html",
+    "main.71cd7eb7.css.map": "/madcamp4_frontend/static/css/main.71cd7eb7.css.map",
+    "main.74a62c5e.js.map": "/madcamp4_frontend/static/js/main.74a62c5e.js.map",
+    "453.71217b9a.chunk.js.map": "/madcamp4_frontend/static/js/453.71217b9a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71cd7eb7.css",
+    "static/js/main.74a62c5e.js"
+  ]
+}
