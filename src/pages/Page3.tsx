@@ -451,9 +451,10 @@ const MusicSheetPage: React.FC = () => {
             )}
         </div>
         <div className="bpm-slider" style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+          <span style={{ color: 'white',  }}> BPM </span>
           <div style={{ display: 'flex', justifyContent: 'space-between', width: '200px', color: 'white' }}>
-            <span>slow</span>
-            <span>fast</span>
+            <span>20</span>
+            <span>1000</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <input type="range" min="30" max="99" onChange={handleBPMChange} style={{ width: '200px'}} />
