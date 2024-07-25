@@ -19,33 +19,39 @@ const NFTMintingModal: React.FC<NFTMintingModalProps> = ({isOpen, onClose, url})
 
   return (
     <div className="nft-minting-modal" style={{
-      position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: 'rgba(0,0,0,0.5)',
-      display: 'flex', justifyContent: 'center', alignItems: 'center'
+      position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: 'rgba(0,0,0,0.8)',
+      display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1000
     }}>
       <div style={{
-        backgroundColor: 'white', padding: '20px', borderRadius: '8px', display: 'flex', flexDirection: 'column',
-        alignItems: 'center', width: '300px'
+        backgroundColor: '#2C2F33', padding: '30px', borderRadius: '10px', display: 'flex', flexDirection: 'column',
+        alignItems: 'center', width: '350px', boxShadow: '0px 0px 15px rgba(0,0,0,0.5)'
       }}>
-        <h2>NFT minting</h2>
+        <h2 style={{ color: '#FFFFFF', marginBottom: '20px', fontWeight: '600' }}>NFT Minting</h2>
         <input
           type="text"
           placeholder="Enter Kaikas wallet key"
           value={walletKey}
           onChange={(e) => setWalletKey(e.target.value)}
-          style={{ margin: '10px 0', padding: '10px', width: '100%' }}
+          style={{
+            margin: '10px 0', padding: '10px', width: '100%', borderRadius: '5px', border: 'none',
+            boxShadow: 'inset 0px 0px 5px rgba(0,0,0,0.2)', fontSize: '16px'
+          }}
         />
         <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
           <button onClick={onClose} style={{
-            backgroundColor: 'red', color: 'white', padding: '10px', borderRadius: '5px', flex: '1', margin: '0 5px'
+            backgroundColor: 'gray', color: 'white', padding: '10px', borderRadius: '5px', flex: '1', margin: '0 5px',
+            border: 'none', cursor: 'pointer', fontSize: '16px', fontWeight: 'bold'
           }}>
             Cancel
           </button>
           <button onClick={() => onConfirm(walletKey)} style={{
-            backgroundColor: 'green', color: 'white', padding: '10px', borderRadius: '5px', flex: '1', margin: '0 5px'
+            backgroundColor: '#483D8B', color: 'white', padding: '10px', borderRadius: '5px', flex: '1', margin: '0 5px',
+            border: 'none', cursor: 'pointer', fontSize: '16px', fontWeight: 'bold'
           }}>
             Confirm
           </button>
         </div>
+
       </div>
     </div>
   );
