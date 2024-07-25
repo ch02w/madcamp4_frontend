@@ -56,7 +56,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://ch02w.github.io/madcamp4_frontend",
+  "homepage": "http://52.79.208.231",
   "eslintConfig": {
     "extends": [
       "react-app",
