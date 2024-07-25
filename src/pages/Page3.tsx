@@ -222,7 +222,6 @@ const MusicSheetPage: React.FC = () => {
         }
       }
 
-      console.log('total time: ' + time);
 
       return transformedNotes;
     };

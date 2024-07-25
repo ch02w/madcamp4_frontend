@@ -30,13 +30,11 @@ const CRDTCanvas: React.FC<CRDTCanvasProps> = ({ pause, selectedColor, onCanvasC
     socketService.emit('requestInitialCanvasState');
 
     socketService.on('canvasState', (state: { colors: string[]; data: CanvasState[] }) => {
-      console.log('Received canvas state:', state);
       setCanvasStates(state.data);
       onCanvasUpdate(state.data); // Notify parent of the new canvas state
     });
 
     socketService.on('initialCanvasState', (state: { colors: string[]; data: CanvasState[] }) => {
-      console.log('Received initial canvas state:', state);
       setCanvasStates(state.data);
       onCanvasUpdate(state.data); // Notify parent of the initial canvas state
     });
@@ -69,7 +67,6 @@ const CRDTCanvas: React.FC<CRDTCanvasProps> = ({ pause, selectedColor, onCanvasC
     const key = `pixel-${x}-${y}`;
     const timestamp = Date.now();
     const payload = { canvasIndex, key, value, timestamp };
-    console.log('Emitting updateCanvas event:', payload);
     socketService.emit('canvasOperation', { type: 'draw', payload });
   };
 

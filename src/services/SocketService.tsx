@@ -24,9 +24,7 @@ class SocketService {
   }
 
   on(event: string, callback: (data: any) => void) {
-    console.log(`Subscribing to event: ${event}`);
     this.socket.on(event, (data) => {
-      console.log(`Event received: ${event}`, data);
       callback(data);
     });
   }
@@ -36,7 +34,6 @@ class SocketService {
   }
 
   emit(event: string, data: any = "") {
-    console.log(`Emitting event: ${event}`, data);
     this.socket.emit(event, data);
   }
 }

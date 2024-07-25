@@ -44,7 +44,6 @@ export async function uploadIpfs(dataUrl: string) {
       },
     );
 
-    console.log(res.data);
 
     const body = {
       name: `${formatDate()}`,
@@ -63,7 +62,6 @@ export async function uploadIpfs(dataUrl: string) {
       },
     );
 
-    console.log(res2.data);
     return res2.data.IpfsHash;
   } catch (error) {
     console.error(error);
