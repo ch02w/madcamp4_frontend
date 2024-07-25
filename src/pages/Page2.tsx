@@ -15,13 +15,6 @@ interface CanvasState {
   [key: string]: { value: number; timestamp: number };
 }
 
-interface CRDTCanvasProps {
-  pause: boolean;
-  selectedColor: string;
-  onCanvasClick: () => void;
-  onCanvasUpdate: (canvasStates: CanvasState[]) => void; // Add this callback to update the canvas state
-}
-
 const Page2: React.FC = () => {
   const [remainingTime, setRemainingTime] = useState<number>(0);
   const [pause, setPause] = useState<boolean>(false);
@@ -32,7 +25,7 @@ const Page2: React.FC = () => {
   const [showDownloadButton, setShowDownloadButton] = useState<boolean>(false);
   const [isMinting, setIsMinting] = useState<boolean>(false);
   const [mintingURL, setMintingURL] = useState<string>('');
-  const canvasRef = useRef<HTMLDivElement>(null);  // Reference to the canvas container
+  const canvasRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -47,7 +40,7 @@ const Page2: React.FC = () => {
     });
 
     socketService.on('clearCanvas', () => {
-      setCanvasStates(Array(6).fill({})); // Clear the canvas states
+      setCanvasStates(Array(6).fill({}));
     });
 
     return () => {
@@ -83,12 +76,12 @@ const Page2: React.FC = () => {
 
     const geometry = new THREE.BoxGeometry(1, 1, 1);
     const materials = [
-      materialArray[0], // Front (z+)
-      materialArray[1], // Back (z-)
-      materialArray[2], // Top (y+)
-      materialArray[3], // Bottom (y-)
-      materialArray[4], // Left (x-)
-      materialArray[5], // Right (x+)
+      materialArray[0],
+      materialArray[1],
+      materialArray[2],
+      materialArray[3],
+      materialArray[4],
+      materialArray[5],
     ];
     const cube = new THREE.Mesh(geometry, materials);
     scene.add(cube);
@@ -127,8 +120,7 @@ const Page2: React.FC = () => {
     }
   };
 
-  const handleCanvasClick = () => {
-  };
+  const handleCanvasClick = () => {};
 
   const handleCanvasUpdate = (updatedCanvasStates: CanvasState[]) => {
     setCanvasStates(updatedCanvasStates);
@@ -152,7 +144,7 @@ const Page2: React.FC = () => {
       >
         <Timer remainingTime={remainingTime} />
       </div>
-      <div className="content" style={{marginTop: '50px'}}>
+      <div className="content" style={{ marginTop: '50px' }}>
         <div className="canvas-wrapper" ref={canvasRef}>
           <CRDTCanvas pause={pause} selectedColor={selectedColor} onCanvasClick={handleCanvasClick} onCanvasUpdate={handleCanvasUpdate} />
         </div>
@@ -161,7 +153,6 @@ const Page2: React.FC = () => {
             onClick={() => setShowColorPicker(!showColorPicker)}
             className="color-picker-button"
           >
-            {showColorPicker ? 'Hide Color Picker' : 'Show Color Picker'}
           </button>
           {showColorPicker && (
             <div className="color-picker">
